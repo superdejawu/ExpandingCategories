@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Studeo: Create a New Project</title>
+		<meta name="description" content="Create a New Project" />
+		<meta name="keywords" content="studeo, thumbnails, grid, preview, google image search, jquery, image grid, expanding, preview, portfolio" />
+		<meta name="author" content="Studeo, Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			
+			<header class="clearfix">
+				<h1>Create a New Project <span> Select a Project Tier </span> </h1>	
+			</header>
+			<div class="main">
+				<ul id="og-grid" class="og-grid row">
+					<li>
+						<a href="#" class = "catalogue-category">
+							<div >
+								<div class = "catalogue-category-img">
+									<img src="images/thumbs/bronze-thumb.png" alt="img01"/>
+								</div>
+									<h3> Bronze </h3>
+									Description
+								
+							</div>
+						</a> <!-- EXPANDER -->
+						<div class="none" style="transition: height 350ms ease; -webkit-transition: height 350ms ease; height: 500px;"><div class="og-expander-inner">
+							<span class="og-close"></span>
+							<div class="og-fullimg">
+							<div class="og-loading" style="display: none;"></div>
+							<img src="images/silver.png" style="display: inline;"></div>
+							<div class="og-details">
+							<h3>Silver</h3>
+							<a href="#">Create</a></div></div>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<div class="catalogue-category">
+								<div class = "catalogue-category-img">
+									<img src="images/thumbs/silver-thumb.png" alt="img02"/>
+								</div>
+									<h3> Silver </h3>
+									Description
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="catalogue-category">
+								<div class="catalogue-category-img">
+									<img src="images/thumbs/gold-thumb.png" alt="img03"/>
+								</div>
+								<h3> Gold </h3>
+								Description
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class = "catalogue-category">
+								<div class="catalogue-category-img">
+									<img src="images/thumbs/bronze-thumb.png" alt="img01"/>
+								</div>
+								<h3> Bronze </h3>
+								Description
+							</div>
+						</a>
+					</li>
+				
+
+				</ul>
+
+			
+			</div>
+		</div><!-- /container -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/gridnew.js"></script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+	</body>
+</html>
