@@ -21,11 +21,11 @@ $(document).ready(function($) {
 			// $(this).next().slideToggle('fast');
 
 
-			if($(this).next().hasClass('catalog-category-expander-reveal')){
+			if(thisExpander.hasClass('catalog-category-expander-reveal')){
 
 				// $(this).next().slideUp('catalog-category-expander-reveal');
 
-				$(this).next().removeClass('catalog-category-expander-reveal');
+				thisExpander.removeClass('catalog-category-expander-reveal');
 				$('.catalog-category').not(thisCategory).css({height: previewHeight});
 
 				totalHeight= previewHeight;
@@ -34,7 +34,7 @@ $(document).ready(function($) {
 			}
 			else{
 
-				$(this).next().addClass('catalog-category-expander-reveal');
+				thisExpander.addClass('catalog-category-expander-reveal');
 				// $(this).next().slideDown('catalog-category-expander-reveal');
 				expanderHeight = $(this).next().outerHeight(),
 
