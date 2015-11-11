@@ -9,8 +9,8 @@ $(document).ready(function($) {
 
 	//on Catagory Preview click function
 	preview.on("click",function(){
-			var expanderHeight = $(this).next().outerHeight(),
-				totalHeight = previewHeight+expanderHeight;
+			var expanderHeight,
+				totalHeight;
 			
 
 			var thisCategory = $(this).parent();
@@ -26,6 +26,8 @@ $(document).ready(function($) {
 				// $(this).next().slideUp('catalog-category-expander-reveal');
 
 				$(this).next().removeClass('catalog-category-expander-reveal');
+				$('.catalog-category').not(thisCategory).css({height: previewHeight});
+
 				totalHeight= previewHeight;
 				console.log("shrink");
 
@@ -34,6 +36,7 @@ $(document).ready(function($) {
 
 				$(this).next().addClass('catalog-category-expander-reveal');
 				// $(this).next().slideDown('catalog-category-expander-reveal');
+				expanderHeight = $(this).next().outerHeight(),
 
 				totalHeight = previewHeight + expanderHeight;
 
