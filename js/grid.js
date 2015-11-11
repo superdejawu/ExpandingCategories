@@ -25,24 +25,29 @@ $(document).ready(function($) {
 
 				// $(this).next().slideUp('catalog-category-expander-reveal');
 
+
 				thisExpander.removeClass('catalog-category-expander-reveal');
-				$('.catalog-category').not(thisCategory).css({height: previewHeight});
+
+				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
+
+				expanderHeight = thisExpander.outerHeight();
 
 				totalHeight= previewHeight;
-				console.log("shrink");
+				// console.log("shrink");
 
 			}
 			else{
 
 				thisExpander.addClass('catalog-category-expander-reveal');
 				// $(this).next().slideDown('catalog-category-expander-reveal');
-				expanderHeight = $(this).next().outerHeight(),
+				expanderHeight = thisExpander.outerHeight(),
+
 
 				totalHeight = previewHeight + expanderHeight;
 
-				console.log("expanded");
+				// console.log("expanded");
 
-				$('.catalog-category').not(thisCategory).css({height: previewHeight});
+				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
 				console.log("shrink everything else");
 
 			}
