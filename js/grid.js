@@ -25,31 +25,32 @@ $(document).ready(function($) {
 			if(thisExpander.hasClass('catalog-category-expander-reveal')){
 
 				// $(this).next().slideUp('catalog-category-expander-reveal');
-
-
-
+				
+				// shrink everything else
 				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
+
+
 
 				expanderHeight = thisExpander.get(0).scrollHeight;
 
-				console.log(expanderHeight);
 
 
 				totalHeight= previewHeight;
 				console.log(totalHeight);
 
 
-				// console.log("shrink");
-				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
-				console.log("shrink everything else");
+				
 
 			}
 			else{
 
+
+				// shrink everything else
+				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
+
 				// $(this).next().slideDown('catalog-category-expander-reveal');
 				expanderHeight = thisExpander.get(0).scrollHeight
 
-				console.log(expanderHeight);
 
 
 				totalHeight = previewHeight + expanderHeight;
@@ -58,14 +59,10 @@ $(document).ready(function($) {
 
 
 
-				// console.log("expanded");
-
-				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
-				console.log("shrink everything else");
 
 			}
 
-   			 thisCategory.animate({height:totalHeight},200);
+   			 thisCategory.animate({height:totalHeight},300, "easeInOutCubic");
    			 console.log(totalHeight);
 
 
