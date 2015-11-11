@@ -18,7 +18,8 @@ $(document).ready(function($) {
 
 			//Expand or collapse this panel
 			thisCategory.toggleClass("og-expanded");
-			// $(this).next().slideToggle('fast');
+			thisExpander.toggleClass("catalog-category-expander-reveal",300, "easeInOutCubic");
+
 
 
 			if(thisExpander.hasClass('catalog-category-expander-reveal')){
@@ -26,24 +27,36 @@ $(document).ready(function($) {
 				// $(this).next().slideUp('catalog-category-expander-reveal');
 
 
-				thisExpander.removeClass('catalog-category-expander-reveal');
 
 				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
 
-				expanderHeight = thisExpander.outerHeight();
+				expanderHeight = thisExpander.get(0).scrollHeight;
+
+				console.log(expanderHeight);
+
 
 				totalHeight= previewHeight;
+				console.log(totalHeight);
+
+
 				// console.log("shrink");
+				$('.catalog-category').not(thisCategory).animate({height: previewHeight},200);
+				console.log("shrink everything else");
 
 			}
 			else{
 
-				thisExpander.addClass('catalog-category-expander-reveal');
 				// $(this).next().slideDown('catalog-category-expander-reveal');
-				expanderHeight = thisExpander.outerHeight(),
+				expanderHeight = thisExpander.get(0).scrollHeight
+
+				console.log(expanderHeight);
 
 
 				totalHeight = previewHeight + expanderHeight;
+				console.log(totalHeight);
+
+
+
 
 				// console.log("expanded");
 
@@ -51,7 +64,10 @@ $(document).ready(function($) {
 				console.log("shrink everything else");
 
 			}
+
    			 thisCategory.animate({height:totalHeight},200);
+   			 console.log(totalHeight);
+
 
 
 			// thisCategory.css({ height: totalHeight });

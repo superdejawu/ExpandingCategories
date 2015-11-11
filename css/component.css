@@ -67,33 +67,36 @@
 
 .catalog-category-expander{
 	overflow:hidden;
+		display: block; 
+
 	position:absolute;
 	width:100%;
-	max-height: 0rem;
+	max-height: 0%;
 	margin: 10px 0;
 	color: lightgray;
 
 /*	background: #E5E4E4;*/	
 	background: rgba(45,45,45,1);
 	left:0;
-}
 
-.catalog-category-expander-reveal{
-	display: block; 
-	max-height:100%;
+/* 	height: 0px;
+*/}
 
-
-}
-
-.catalog-category-expander-inner{
-	padding: 2rem ;
-
-}
-
-.catalog-category-expander-inner h2{
+.catalog-category-expander h2{
 	font-weight: 300;
 
 }
+
+.catalog-category-expander-reveal{
+	max-height:100%;
+
+
+/*	height: 200px;
+*/
+}
+
+
+
 
 .catalog-category-preview > img{
 	height: 9.5rem;
